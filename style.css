@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  color: white;
+  background: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button.active {
+  color: black;
+  background: white;
+}
+
+.sky {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto 24px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: skyblue;
+}
+
+.cloud {
+  position: absolute;
+  left: -120px;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  background: white;
+  opacity: 0;
+  animation: drift 60s linear infinite;
+  transition: opacity 1s;
+}
+
+.cloud:nth-child(1) { top: 20px; }
+.cloud:nth-child(2) { top: 80px; animation-delay: -15s; }
+.cloud:nth-child(3) { top: 140px; animation-delay: -30s; }
+.cloud:nth-child(4) { top: 200px; animation-delay: -45s; }
+.cloud:nth-child(5) { top: 250px; animation-delay: -10s; }
+
+@keyframes drift {
+  to { transform: translateX(700px); }
+}
+
+#temperature {
+  margin: 0;
+  font-size: 64px;
+}
+
+.rain {
+  position: absolute;
+  inset: 0;
+}
+
+.rain span {
+  position: absolute;
+  top: -20px;
+  width: 2px;
+  height: 14px;
+  background: #bde;
+  animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(340px); }
+}

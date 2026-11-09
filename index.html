@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sky Now</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sky Now</h1>
+
+  <div class="buttons">
+    <button class="city active" data-name="Toronto" data-lat="43.65" data-lon="-79.38">Toronto</button>
+    <button class="city" data-name="Reykjavik" data-lat="64.15" data-lon="-21.94">Reykjavik</button>
+    <button class="city" data-name="Singapore" data-lat="1.35" data-lon="103.82">Singapore</button>
+    <button class="city" data-name="Sydney" data-lat="-33.87" data-lon="151.21">Sydney</button>
+    <button id="refresh">Refresh</button>
+  </div>
+
+  <div class="sky">
+    <span class="cloud"></span>
+    <span class="cloud"></span>
+    <span class="cloud"></span>
+    <span class="cloud"></span>
+    <span class="cloud"></span>
+    <div class="rain"></div>
+  </div>
+
+  <h2 id="city">Toronto</h2>
+  <p id="temperature">--</p>
+  <p id="details">Loading...</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
